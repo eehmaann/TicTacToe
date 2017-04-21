@@ -4,7 +4,7 @@
 *
 *
 * @author Eric Ehmann
-* @Version Last Modified 12_17_15
+* @Version Last Modified 4_20_17
 *
 **/
 class TicTacToeBoard
@@ -37,7 +37,7 @@ class TicTacToeBoard
 			{
 				board=game.turn(board, one, oneMark);
 				toString(board);
-				oneWin=game.checkWin(board, oneMark);
+				oneWin=game.checkWin(board);
 				if(oneWin)
 					{
 						System.out.println ("Game Over! " + one + " WINS!");
@@ -51,7 +51,7 @@ class TicTacToeBoard
 						}
 				board=game.turn(board, two, twoMark);
 				toString(board);
-				twoWin=game.checkWin(board, twoMark);
+				twoWin=game.checkWin(board);
 				
 			}
 			while (!twoWin);
